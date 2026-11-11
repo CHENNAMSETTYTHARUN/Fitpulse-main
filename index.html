@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Find your pace with Fitpulse: expert coaches, personal training plans, and a community that keeps you moving."
+    />
+    <meta name="theme-color" content="#f5f4f0" />
+    <title>Fitpulse — Find your pace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="loading-screen is-visible" id="loading-screen" role="status" aria-live="polite">
+      <div class="loading-content">
+        <span class="loading-brand-mark" aria-hidden="true">F</span>
+        <span class="loading-brand">fitpulse<span class="brand-period">.</span></span>
+        <span class="loading-spinner" aria-hidden="true"></span>
+        <span class="visually-hidden">Loading Fitpulse</span>
+      </div>
+    </div>
+
+    <a class="skip-link" href="#app">Skip to content</a>
+
+    <header class="site-header" id="site-header">
+      <nav class="nav shell" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Fitpulse home">
+          <span class="brand-mark" aria-hidden="true">F</span>
+          <span>fitpulse<span class="brand-period">.</span></span>
+        </a>
+
+        <div class="nav-links" id="nav-links"></div>
+
+        <label class="search-box">
+          <span class="visually-hidden">Search programs</span>
+          <span class="icon" data-icon="search" aria-hidden="true"></span>
+          <input id="site-search" type="search" placeholder="Search" />
+          <kbd>↵</kbd>
+        </label>
+
+        <div class="nav-actions">
+          <button
+            class="icon-button theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Switch to dark mode"
+            title="Switch color theme"
+          >
+            <span class="icon" data-icon="moon" aria-hidden="true"></span>
+          </button>
+          <a class="button button-dark nav-login" id="login-link" href="#login">Log in</a>
+          <button
+            class="icon-button menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="nav-links"
+          >
+            <span class="icon" data-icon="menu" aria-hidden="true"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="app" tabindex="-1"></main>
+
+    <button
+      class="chat-launcher"
+      id="chat-launcher"
+      type="button"
+      aria-label="Open membership help"
+      aria-expanded="false"
+      aria-controls="chat-panel"
+    >
+      <span class="icon" data-icon="message" aria-hidden="true"></span>
+    </button>
+
+    <aside class="chat-panel" id="chat-panel" aria-label="Membership help" aria-hidden="true">
+      <div class="chat-heading">
+        <div>
+          <span class="eyebrow">FITPULSE SUPPORT</span>
+          <h2>How can we help?</h2>
+        </div>
+        <button class="icon-button chat-close" id="chat-close" type="button" aria-label="Close help">
+          <span class="icon" data-icon="close" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="chat-messages" id="chat-messages" aria-live="polite">
+        <p class="chat-message">Hi there! Choose a question and I’ll point you in the right direction.</p>
+      </div>
+      <div class="chat-questions" id="chat-questions"></div>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
